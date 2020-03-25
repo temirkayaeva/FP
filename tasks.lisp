@@ -52,8 +52,8 @@
 ;15: Определите функцию, вычисляющую скалярное произведение векторов, заданных списками целых чисел.
 
 (defun scal-prod (lst1 lst2)
-    (cond ((null lst1) 0)
-		(t(+ (* (car lst1) (car lst2)) (scal-prod (cdr lst1) (cdr lst2))))))
+  (if (or (null lst1)(null lst2)) 0
+		(+ (* (car lst1) (car lst2)) (scal-prod (cdr lst1) (cdr lst2)))))
 
 ; (scal-prod '(1 2 3) '(1 2 3)) 14
 ; (scal-prod '(0) '(1 2 3)) 0
