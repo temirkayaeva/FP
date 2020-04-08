@@ -67,3 +67,24 @@
 (print(task 3))
 (print(task 0))
 (print(task 5))
+
+
+; 13. Определите функцию, удаляющую в исходном списке все повторные вхождения элементов.
+
+; 11. Определите функцию, осуществляющую разделение исходного списка на два подсписка. В первый из них должно попасть указанное количество элементов с начала списка, во второй — оставшиеся элементы.
+
+
+(defun task (lst n)
+ (if lst
+  (if (zerop n)
+   (cons nil (cons lst nil))
+   ((lambda (elem result)
+     (cons
+      (cons elem (car result))
+      (cdr result)))
+    (car lst)
+    (task (cdr lst) (1- n))))))
+
+(print(task '(a b c d e f g) 3))
+(print(task '(a b c d e f g) 1))
+(print(task '(a b c d e f g) 0))
