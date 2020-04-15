@@ -14,10 +14,15 @@
 )
 
 
-(defun task (lst); 
-  (cond ((null lst) nil)
-   ((memb (car lst) (cdr lst)) (task (cdr lst)))
-   (T (cons (car lst) (task (cdr lst))))))
+(defun task (lst)
+        ((lambda (a b)
+                 (cond 
+                     ((null lst) 
+                      nil)
+                     ((memb a b) (task b))
+                     (T (cons a (task b)))
+                     )) (car lst) (cdr lst))
+    )
 
  
 (print(task '(1 2 3 3 3)))
