@@ -1,23 +1,6 @@
 ; задачи 15 5 7 11 12 13 19 31 41 47 48
 
-; 12:  Определите функцию, заменяющую в исходном списке два подряд идущих одинаковых элемента одним
 
-(defun task (lst)
-    ((lambda (первый)
-         (cond
-            ((null lst)
-                 NIL)
-            ((equal первый (cadr lst))
-                 (cons первый (task (cddr lst))))
-            (t
-                 (cons первый (task (cdr lst))))
-         )) (car lst)) 
-)
-
-
-(print(task '(1 1 1 2 2 2))) 
-(print(task '(1 2 3)))
-(print(task '(2 2 2 2 2 2 2 3))) 
 
 
 ; 13. Определите функцию, удаляющую в исходном списке все повторные вхождения элементов.
@@ -39,23 +22,6 @@
  
 (print(task '(1 2 3 3 3)))
 
-
-; 11. Определите функцию, осуществляющую разделение исходного списка на два подсписка. В первый из них должно попасть указанное количество элементов с начала списка, во второй — оставшиеся элементы.
-
-(defun task (lst n)
- (if lst
-  (if (zerop n)
-   (cons nil (cons lst nil))
-   ((lambda (elem result)
-     (cons
-      (cons elem (car result))
-      (cdr result)))
-    (car lst)
-    (task (cdr lst) (1- n))))))
-
-(print(task '(a b c d e f g) 3))
-(print(task '(a b c d e f g) 1))
-(print(task '(a b c d e f g) 0))
 
 ; 19: Определите функцию (ЛУКОВИЦА n), строящую N-уровневый вложенный список, элементом которого на самом глубоком уровне является N.
 
@@ -110,3 +76,38 @@
 (print(scal-prod '(0) '(1 2 3)))
 
 
+; 12:  Определите функцию, заменяющую в исходном списке два подряд идущих одинаковых элемента одним
+
+(defun task (lst)
+    ((lambda (первый)
+         (cond
+            ((null lst)
+                 NIL)
+            ((equal первый (cadr lst))
+                 (cons первый (task (cddr lst))))
+            (t
+                 (cons первый (task (cdr lst))))
+         )) (car lst)) 
+)
+
+
+(print(task '(1 1 1 2 2 2))) 
+(print(task '(1 2 3)))
+(print(task '(2 2 2 2 2 2 2 3))) 
+
+; 11. Определите функцию, осуществляющую разделение исходного списка на два подсписка. В первый из них должно попасть указанное количество элементов с начала списка, во второй — оставшиеся элементы.
+
+(defun task (lst n)
+ (if lst
+  (if (zerop n)
+   (cons nil (cons lst nil))
+   ((lambda (elem result)
+     (cons
+      (cons elem (car result))
+      (cdr result)))
+    (car lst)
+    (task (cdr lst) (1- n))))))
+
+(print(task '(a b c d e f g) 3))
+(print(task '(a b c d e f g) 1))
+(print(task '(a b c d e f g) 0))
