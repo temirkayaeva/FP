@@ -11,7 +11,7 @@
                  (cons первый (task (cddr lst))))
             (t
                  (cons первый (task (cdr lst))))
-         )) (car lst))  ; первый = (car lst)
+         )) (car lst)) 
 )
 
 
@@ -35,6 +35,16 @@
 (print(task '(a b c d e f g) 3))
 (print(task '(a b c d e f g) 1))
 (print(task '(a b c d e f g) 0))
+
+; 19: Определите функцию (ЛУКОВИЦА n), строящую N-уровневый вложенный список, элементом которого на самом глубоком уровне является N.
+
+(defun onion (a n)
+  (cond ((zerop n) a)
+   (t (cons (onion a (- n 1)) nil))))
+ 
+(print(onion 4 4))
+(print(onion 3 3))
+(print(onion 2 2))
 
 
 ; 5: Oпределите функцию, которая увеличивает элементы исходного списка на единицy
@@ -74,15 +84,6 @@
 (print(scal-prod '(1 2 3) '(1 2 3)))
 (print(scal-prod '(0) '(1 2 3)))
 
-; 19: Определите функцию (ЛУКОВИЦА n), строящую N-уровневый вложенный список, элементом которого на самом глубоком уровне является N.
-
-(defun task (n &optional (k n))
-  (if (equal n 0) k
-      (task (- n 1) (list k))))
-
-(print(task 3))
-(print(task 0))
-(print(task 5))
 
 
 ; 13. Определите функцию, удаляющую в исходном списке все повторные вхождения элементов.
