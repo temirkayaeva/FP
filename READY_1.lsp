@@ -3,12 +3,21 @@
 ;Напишите предикат (ИМЕЕТ-СВОЙСТВО символ свойство), который проверяет, обладает ли символ данным свойством.
 
 (defun имеет-свойство (символ свойство)
-	(cond
-		((null (remprop символ свойство)) nil)
-		(t t)))
+    (найти-свойство свойство (symbol-plist символ))
+)
+
+
+(defun найти-свойство (свойство lst)
+    (cond
+        ((null lst) nil)
+        ((equal свойство (car lst)) t)
+        (t (найти-свойство свойство (cddr lst)))
+    )
+)
 
     (setf (get 'Vehicle 'brand) 'bmw) 
     (setf (get 'Vehicle 'model) 'x5) 
     (setf (get 'Vehicle 'color) 'grey) 
     (setf (get 'Vehicle 'year) '2008)
     (print(имеет-свойство `vehicle `year))
+
