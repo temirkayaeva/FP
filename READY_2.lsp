@@ -3,4 +3,4 @@
 (defun -funcall (функция &rest аргументы) 
     (apply функция аргументы))
 
-(print(-funcall `+ 1 2 3 4))
+(print(-funcall `* 1 2 3 4))
