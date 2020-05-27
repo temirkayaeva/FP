@@ -6,7 +6,18 @@
   * [Простые значения](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#простые-значения)
   * [Условия и циклы](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#условия-и-циклы)
     * [switch](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#switch)
-
+    * [for-in](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#for-in)
+    * [while](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#while)
+    * [for](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#for)
+  * [Функции и замыкания](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#функции-и-замыкания)
+  * [Объекты и классы](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#объекты-и-классы)
+  * [Перечисления и Структуры](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#перечисления-и-структуры)
+  * [Обобщенные типы (generics)](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#обобщенные-типы-generics)
+  * [Протоколы и Расширения](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#протоколы-и-расширения)
+  * [Обработка ошибок](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#обработка-ошибок)
+* [Литература](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#литература)
+  
+  
 ## О языке Swift
 Swift — мультипарадигменный объектно-ориентированный язык программирования, созданный компанией Apple для разработчиков iOS и OS X. Swift работает с фреймворками Cocoa и Cocoa Touch и совместим с основной кодовой базой Apple, написанной на Objective-C. Swift задумывался как более безопасный язык в сравнении с Objective-C. Язык поддерживается в среде программирования Xcode 6; программы на нем компилируются при помощи Apple LLVM и используют рантайм Objective-C, что делает возможным использование обоих языков (а также pure С и С++) в рамках одной программы. Был анонсирован на конференции разработчиков WWDC 2014.
 
