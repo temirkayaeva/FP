@@ -1,8 +1,8 @@
-* [О языке Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#о-языке-swift) 
+* ### [О языке Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#о-языке-swift) 
   * [Где применяется Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#где-применяется-swift) 
   * [Главные преимущества Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#главные-преимущества-swift) 
   * [Недостатки Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#недостатки-swift)
-* [Основы языка Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#основы-языка-swift)
+* ### [Основы языка Swift](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#основы-языка-swift)
   * [Простые значения](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#простые-значения)
   * [Условия и циклы](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#условия-и-циклы)
     * [switch](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#switch)
@@ -15,7 +15,7 @@
   * [Обобщенные типы (generics)](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#обобщенные-типы-generics)
   * [Протоколы и Расширения](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#протоколы-и-расширения)
   * [Обработка ошибок](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#обработка-ошибок)
-* [Литература](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#литература)
+* ### [Литература](https://github.com/temirkayaeva/lisp/blob/master/SWIFT.md#литература)
   
   
 ## О языке Swift
