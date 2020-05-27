@@ -19,6 +19,6 @@ main = do
     print $ union1 [1, 2] [3]
     print "TASK 16"
     print "Test 1"
-    print $ plurality "123"
+    print $ plurality [1,2,3]
     print "Test 2"
-    print $ plurality "1231"
+    print $ plurality [1,2,1]
