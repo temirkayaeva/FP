@@ -7,18 +7,30 @@
 plurality (x:xs)   = x `notElem` xs && plurality xs
 plurality _        = True
 
+-- 17. Определите функцию МНОЖЕСТВО, преобразующую список в множество.
+
+removeduplicates = foldl (\seen x -> if x `elem` seen
+                                      then seen
+                                      else seen ++ [x]) []
+
+
 -- 22. Оределите функцию ОБЪЕДИНЕНИЕ, формирующую объединение двух множеств.
 
 union1 s1 s2 = s1 ++ (filter (\ x -> not (x `elem` s1)) s2) 
 
 main = do
-    print "TASK 22"
-    print "Test 1"
-    print $ union1 [1, 2] [1]
-    print "Test 2"
-    print $ union1 [1, 2] [3]
     print "TASK 16"
     print "Test 1"
     print $ plurality [1,2,3]
     print "Test 2"
     print $ plurality [1,2,1]
+    print "TASK 17"
+    print "Test 1"
+    print $ removeduplicates [1,2,3]
+    print "Test 2"
+    print $ removeduplicates [1,2,1]
+    print "TASK 22"
+    print "Test 1"
+    print $ union1 [1, 2] [1]
+    print "Test 2"
+    print $ union1 [1, 2] [3]
